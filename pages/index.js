@@ -1,11 +1,13 @@
 import Layout from '../components/Layout';
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import ProductItem from '../components/ProductItem';
-import axios from 'axios';
+// import axios from 'axios';
 //import data from '../utils/data';
 
 export async function getStaticProps() {
-  const data = await fetch('http://localhost:4000/api/products');
+  const data = await fetch(
+    'https://next-tailwind-amazona-xi.vercel.app/api/products'
+  );
 
   const products = await data.json();
 
